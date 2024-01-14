@@ -45,6 +45,76 @@ CREATE TABLE IF NOT EXISTS Tracks_collections (
   collection_id integer references Collections(collection_id)
 );
 
+INSERT INTO genre VALUES
+('1','Rock'),
+('2','Jazz'),
+('3','Pop'),
+('4','Latin'),
+('5','Metal');
+
+INSERT INTO musicians VALUES
+('1','The Beatles'),
+('2','Луи Армстронг'),
+('3','Lady Gaga'),
+('4','Ariana Grande'),
+('5','Ricky Martin'),
+('6','Ozzy Osbourne'),
+('7','Starset');
+
+INSERT INTO genres_musicians VALUES
+('1','1','1'),
+('2','2','2'),
+('3','3','3'),
+('4','4','3'),
+('5','5','4'),
+('6','6','5'),
+('7','7','1');
+
+INSERT INTO albums VALUES
+('1','Abbey Road','1969'),
+('2','The Great Summit','1961'),
+('3','The Fame','2008'),
+('4','Thank U, Next','2019'),
+('5','Sound Loaded','2000'),
+('6','No More Tears','1991'),
+('7','Transmissions','2014');
+
+INSERT INTO musicians_albums VALUES
+('1','1','1'),
+('2','2','2'),
+('3','3','3'),
+('4','4','4'),
+('5','5','5'),
+('6','6','6'),
+('7','7','7');
+
+INSERT INTO tracks VALUES
+('1','Come Together','260','1'),
+('2','Mood Indigo','240','2'),
+('3','Poker Face','238','3'),
+('4','Thank U, Next','208','4'),
+('5','Amor','207','5'),
+('6','No More Tears','444','6'),
+('7','My Demons','288','7');
+
+INSERT INTO collections VALUES
+('1','Abbey Road','1969'),
+('2','The Great Summit','1961'),
+('3','The Fame','2008'),
+('4','Thank U, Next','2019'),
+('5','Sound Loaded','2000'),
+('6','No More Tears','1991'),
+('7','Transmissions','2014');
+
+INSERT INTO tracks_collections VALUES
+('1','1','1'),
+('2','2','2'),
+('3','3','3'),
+('4','4','4'),
+('5','5','5'),
+('6','6','6'),
+('7','7','7');
+
 select name, duration 
 from tracks
 where duration = (SELECT MAX(duration) FROM tracks);
